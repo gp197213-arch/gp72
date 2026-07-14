@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Портфолио — веб-разработка, дизайн, креативные решения" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алексей Петров — Портфолио</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#hero" class="nav__logo">
+                <i class="fa-solid fa-code"></i> AP
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#about" class="nav__link">Обо мне</a></li>
+                <li><a href="#projects" class="nav__link">Проекты</a></li>
+                <li><a href="#contact" class="nav__link">Контакты</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <p class="hero__greeting">Привет, я</p>
+            <h1 class="hero__name">Алексей Петров</h1>
+            <p class="hero__title">Frontend-разработчик &amp; Дизайнер</p>
+            <p class="hero__description">
+                Создаю современные веб-приложения с акцентом на производительность,
+                доступность и эстетику. Превращаю идеи в код.
+            </p>
+            <div class="hero__buttons">
+                <a href="#projects" class="btn btn--primary">Мои проекты</a>
+                <a href="#contact" class="btn btn--outline">Связаться</a>
+            </div>
+            <div class="hero__social">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="hero__visual">
+            <div class="hero__shape"></div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title reveal">Обо мне</h2>
+            <div class="about__grid">
+                <div class="about__text reveal">
+                    <p>
+                        Привет! Я — Алексей, веб-разработчик с более чем 5-летним опытом
+                        создания цифровых продуктов. Специализируюсь на React, TypeScript
+                        и современном CSS.
+                    </p>
+                    <p>
+                        Мои ключевые навыки: проектирование интерфейсов, оптимизация
+                        производительности, доступность (a11y) и дизайн-системы.
+                        Люблю превращать сложные задачи в элегантные решения.
+                    </p>
+                    <p>
+                        Когда не кодирую — изучаю новые технологии, конtribute в open-source
+                        проекты и делюсь опытом на технических митапах.
+                    </p>
+                </div>
+                <div class="about__skills reveal">
+                    <h3 class="about__skills-title">Навыки</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-brands fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-brands fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-brands fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Проекты</h2>
+            <div class="projects__grid">
+
+                <article class="project-card reveal">
+                    <div class="project-card__icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="project-card__title">ShopWave</h3>
+                    <p class="project-card__description">
+                        Платформа электронной коммерции с каталогом товаров,
+                        корзиной, платёжным шлюзом и админ-панелью. Мобильная
+                        адаптивность, PWA-поддержка.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-card__links">
+                        <a href="#" class="btn btn--small btn--primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Демо
+                        </a>
+                        <a href="#" class="btn btn--small btn--outline">
+                            <i class="fa-brands fa-github"></i> Код
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card__icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="project-card__title">DataViz</h3>
+                    <p class="project-card__description">
+                        Интерактивная панель аналитики с визуализацией данных
+                        в реальном времени. Графики, тепловые карты,
+                        фильтрация и экспорт отчётов в PDF.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">WebSocket</span>
+                    </div>
+                    <div class="project-card__links">
+                        <a href="#" class="btn btn--small btn--primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Демо
+                        </a>
+                        <a href="#" class="btn btn--small btn--outline">
+                            <i class="fa-brands fa-github"></i> Код
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card__icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="project-card__title">ChatPulse</h3>
+                    <p class="project-card__description">
+                        Мессенджер с end-to-end шифрованием, групповыми чатами,
+                        поддержкой файлов и голосовых сообщений.
+                        Нативное ощущение на вебе.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">Vue 3</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">WebRTC</span>
+                    </div>
+                    <div class="project-card__links">
+                        <a href="#" class="btn btn--small btn--primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Демо
+                        </a>
+                        <a href="#" class="btn btn--small btn--outline">
+                            <i class="fa-brands fa-github"></i> Код
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Контакты</h2>
+            <div class="contact__grid">
+                <div class="contact__info reveal">
+                    <p>
+                        Есть идея для проекта или предложение о сотрудничестве?
+                        Напишите мне — отвечу в течение 24 часов.
+                    </p>
+                    <ul class="contact__details">
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>alexey@example.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Москва, Россия</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>UTC+3 (MSK)</span>
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact__form reveal" id="contactForm" no="novalidate">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Расскажите о вашем проекте..." required="required"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <i class="fa-solid fa-paper-plane"></i> Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__copy">&copy; 2025 Алексей Петров. Все права защищены.</p>
+                <div class="footer__links">
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
