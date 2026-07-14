@@ -28,6 +28,13 @@
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Адаптив: ≥1440px */
+@media (min-width: 1440px) {
+    :root {
+        --max-w: 1280px;
+    }
+}
+
 /* Тёмная тема */
 [data-theme="dark"] {
     --color-bg: #0c0c14;
@@ -168,6 +175,12 @@ img { max-width: 100%; display: block; }
     gap: 8px;
 }
 .nav__logo:hover { color: var(--color-primary); }
+.nav__logo-icon {
+    transition: transform 0.3s var(--ease);
+}
+.nav__logo:hover .nav__logo-icon {
+    transform: rotate(-10deg) scale(1.05);
+}
 
 .nav__menu {
     display: flex;
@@ -248,11 +261,11 @@ img { max-width: 100%; display: block; }
    Герой
    ============================================= */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: calc(var(--header-h) + 40px) 20px 60px;
+    padding: 0 5vw;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -332,8 +345,8 @@ img { max-width: 100%; display: block; }
     pointer-events: none;
 }
 .hero__shape {
-    width: 500px;
-    height: 500px;
+    width: min(500px, 80vw);
+    height: min(500px, 80vw);
     border-radius: 50%;
     background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
     opacity: 0.06;
@@ -378,7 +391,7 @@ img { max-width: 100%; display: block; }
    Обо мне
    ============================================= */
 .about {
-    padding: 100px 0;
+    padding: clamp(60px, 8vw, 100px) 0;
     background: var(--color-surface);
     transition: background 0.3s var(--ease);
 }
@@ -433,7 +446,7 @@ img { max-width: 100%; display: block; }
 /* =============================================
    Проекты
    ============================================= */
-.projects { padding: 100px 0; }
+.projects { padding: clamp(60px, 8vw, 100px) 0; }
 
 .projects__grid {
     display: grid;
@@ -508,7 +521,7 @@ img { max-width: 100%; display: block; }
    Контакты
    ============================================= */
 .contact {
-    padding: 100px 0;
+    padding: clamp(60px, 8vw, 100px) 0;
     background: var(--color-surface);
     transition: background 0.3s var(--ease);
 }
@@ -650,24 +663,27 @@ img { max-width: 100%; display: block; }
    ============================================= */
 @media (min-width: 1024px) {
     .hero {
-        flex-direction: row;
-        text-align: left;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
-    .hero__content { flex: 1; }
     .hero__visual {
         position: relative;
         top: auto;
         left: auto;
         transform: none;
-        flex: 0 0 380px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .hero__buttons { justify-content: flex-start; }
-    .hero__social { justify-content: flex-start; }
+}
+
+/* =============================================
+   Адаптив: ≥1920px
+   ============================================= */
+@media (min-width: 1920px) {
+    :root {
+        --max-w: 1400px;
+    }
 }
 
 /* =============================================
@@ -690,6 +706,35 @@ img { max-width: 100%; display: block; }
     }
     .nav__menu.open { transform: translateX(0); }
     .nav__link { font-size: 1.2rem; }
+}
+
+/* =============================================
+   Маленькие экраны: ≤480px
+   ============================================= */
+@media (max-width: 480px) {
+    .hero {
+        padding: calc(var(--header-h) + 20px) 16px 40px;
+    }
+    .hero__greeting {
+        font-size: 0.85rem;
+    }
+    .hero__buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .project-card {
+        padding: 24px 20px;
+    }
 }
 
 /* =============================================
